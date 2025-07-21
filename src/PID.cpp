@@ -56,13 +56,13 @@ void PID::run() {
 	this->time = 0;
 	
 	while(true) {
-		if (this->PV >= this->SP) {
-				break;
-			}
+		
 		std::cout << "Times Run: " << this->time << std::endl;
 		std::cout << "PV: " << this->PV << std::endl;
 		std::cout << "SP: " << this->SP << std::endl;
-
+		if (this->PV >= this->SP) {
+			break;
+		}
 		float temp = this->control_output();
 		std::cout << "Returned calc: " << temp << std::endl;
 		this->PV += (temp/10);
