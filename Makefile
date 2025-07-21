@@ -18,7 +18,7 @@ cc := g++
 all: $(exe)
 
 $(exe): $(obj) | $(out_dir)
-	$(cc) $^ -o $@
+	$(cc) $^ -lncurses -o $@
 
 $(obj_dir)/%.o:  $(src_dir)/%.cpp | $(obj_dir)
 	$(cc) $(cppflags) -c $< -o $@
