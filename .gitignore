@@ -36,3 +36,4 @@ rel/output
 
 # SWP files
 *.swp
+/rel
