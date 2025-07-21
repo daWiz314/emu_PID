@@ -1,14 +1,11 @@
-#include <iostream>
+#include <ncurses.h>				// Switching out displaying out to NCurses
 
 #include "PID.h"					// Our PID Class header file
 
-using namespace std;				// I am lazy and don't want to type out STD
-									// I also don't have to worry about other namespaces in this program
-
 int main() {
-	cout << "Hello World" << endl;
 
-	PID pid(100, 1, 0.1, 0.5);
+	PID pid(100, .5, .1, .1);
+
 	pid.run();
 
 	return 0;
